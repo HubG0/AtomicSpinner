@@ -1,3 +1,6 @@
+/* Styles for creating an animated atom-like shape */
+
+/* Styles for the container */
 .atom {
 	position: relative;
 	display: flex;
@@ -7,6 +10,7 @@
 	justify-content: center;
 }
 
+/* Pseudo-element for the central sphere */
 .atom::before {
 	content: "";
 	position: absolute;
@@ -17,6 +21,7 @@
 	border-radius: 50%;
 }
 
+/* Styles for the rotating lines */
 .line {
 	width: 100%;
 	height: 100%;
@@ -35,32 +40,69 @@
 	animation: rotateLine 3s linear infinite;
 }
 
-.line-1 { animation-name: line1; }
-.line-2 { animation-name: line2; }
-.line-3 { animation-name: line3; }
-.line-4 { animation-name: line4; }
+/* Animation keyframes for rotating lines */
+.line-1 {
+	animation-name: line1;
+}
+
+.line-2 {
+	animation-name: line2;
+}
+
+.line-3 {
+	animation-name: line3;
+}
+
+.line-4 {
+	animation-name: line4;
+}
 
 @keyframes rotateLine {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes line1 {
-	from { transform: rotateX(70deg) rotateY(-70deg) rotateZ(0deg); }
-	to { transform: rotateX(70deg) rotateY(-70deg) rotateZ(360deg); }
+	from {
+		transform: rotateX(70deg) rotateY(-70deg) rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateX(70deg) rotateY(-70deg) rotateZ(360deg);
+	}
 }
 
 @keyframes line2 {
-	from { transform: rotateX(-70deg) rotateY(-70deg) rotateZ(0deg); }
-	to { transform: rotateX(-70deg) rotateY(-70deg) rotateZ(360deg); }
+	from {
+		transform: rotateX(-70deg) rotateY(-70deg) rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateX(-70deg) rotateY(-70deg) rotateZ(360deg);
+	}
 }
 
 @keyframes line3 {
-	from { transform: rotateX(80deg) rotateY(25deg) rotateZ(0deg); }
-	to { transform: rotateX(80deg) rotateY(25deg) rotateZ(360deg); }
+	from {
+		transform: rotateX(80deg) rotateY(25deg) rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateX(80deg) rotateY(25deg) rotateZ(360deg);
+	}
 }
 
 @keyframes line4 {
-	from { transform: rotateX(-80deg) rotateY(25deg) rotateZ(0deg); }
-	to { transform: rotateX(-80deg) rotateY(25deg) rotateZ(360deg); }
+	from {
+		transform: rotateX(-80deg) rotateY(25deg) rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateX(-80deg) rotateY(25deg) rotateZ(360deg);
+	}
 }
